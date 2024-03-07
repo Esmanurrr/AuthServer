@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<CustomTokenOptions>(builder.Configuration.GetSection("TokenOption"));
 
-builder.Services.Configure<Client>(builder.Configuration.GetSection("Clients"));
+builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clients"));
 
 
 builder.Services.AddControllers();

@@ -41,7 +41,7 @@ namespace AuthServer.Service.Services
 
         }
 
-        public async Task<Response<UserAppDto>> GetUserByName(string username)
+        public async Task<Response<UserAppDto>> GetUserByNameAsync(string username)
         {
             var user = await _userManager.FindByNameAsync(username);
 
